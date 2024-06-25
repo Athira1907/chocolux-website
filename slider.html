@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font awesome -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css" /> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/solid.min.css"  /> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css" /> -->
+
+    <!-- <link href="/path/to/material-icons/iconfont/material-icons.css" rel="stylesheet"> -->
+   
+    <style>
+        .slider{
+            
+            display: flex;
+            min-width: 100%;
+ /* overflow: hidden; */
+ transition: 3s ;
+ 
+        }
+        .slider-content{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+padding-top: 130px;
+  z-index: 1;
+  min-width: 100%;
+    height: 30vh;
+ 
+        } 
+        .landing-page{
+            width: 100%;
+    height: 600px;
+    background: 
+        linear-gradient(to right, rgb(99, 35, 35),rgb(99, 35, 35)) left top no-repeat,
+        linear-gradient(to right, #fff, #fff) right bottom no-repeat;
+    background-size: 70% 100%, 30% 100%; /* Adjust the size of each background */
+        }
+       
+        .arrow{
+           
+            position: absolute;
+            left: 0%;
+            margin-left: 8px;
+            top: 35%;
+    transform: translateY(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+
+.bi-arrow-right ,
+.bi-arrow-left{
+    /* width: 100px;
+    height: 50px; */
+    background-color: #fff;
+    color: #4b1a1a;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    /* font-size: 25px; */
+}
+.heading{
+    font-family: "Tangerine", cursive;
+    font-size: 53px;
+    font-weight: bolder;
+}
+.image {
+    width: 350px;
+    height: 350px;
+    /* margin-left: 230px; */
+    margin-left: -190px;
+ border-radius: 50%;
+}
+    </style>
+</head>
+<body>
+    <div class="arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" id="left" width="46" height="46" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" id="right" width="46" height="46" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+          </svg>
+    </div>
+    <div class="landing-page">
+        <div class="slider">
+            <div class="slider-content">
+                <h1 class="heading" id="yummy">Chocolate <br> yummy</h1>
+                <img class="image" src="./Milk-Chocolate-1.jpg" alt="">
+            </div>
+            <div class="slider-content">
+                <h1 class="heading" id="yummy">Chocolate <br> yummy 1</h1>
+                <img class="image" src="./Milk-Chocolate-1.jpg" alt="">
+            </div>
+            <div class="slider-content">
+                <h1 class="heading" id="yummy">Chocolate <br> yummy 2</h1>
+                <img class="image" src="./Milk-Chocolate-1.jpg" alt="">
+            </div>
+            <div class="slider-content">
+                <h1 class="heading" id="yummy">Chocolate <br> yummy 3</h1>
+                <img class="image" src="./Milk-Chocolate-1.jpg" alt="">
+            </div>
+            <div class="slider-content">
+                <h1 class="heading" id="yummy">Chocolate <br> yummy 4</h1>
+                <img class="image" src="./Milk-Chocolate-1.jpg" alt="">
+            </div>
+        </div>
+       
+    </div>
+</body>
+<script type="text/javascript">
+// dom
+document.addEventListener('DOMContentLoaded',()=>{
+    console.log('dom fully parseefd');
+    const slider=document.querySelector('.slider')
+const sliderContent=document.querySelectorAll('.slider-content')
+const leftArrow=document.getElementById('left')
+const rightArrow=document.getElementById('right')
+let slideNum=1
+let length=sliderContent.length
+let width=100%
+console.log(length);
+
+
+
+
+// when left arrow clicked , .slider-content move towards right
+leftArrow.addEventListener('click',()=>{
+    length>1 ? prevSlide() : lastSlide()
+
+console.log(slideNum);
+    console.log(slideNum>1);
+    // e.preventDefault()
+console.log('hai left');
+if(leftArrow){
+        console.log('hai left');        
+    }
+else {
+    console.log('error');
+}
+})
+
+
+
+
+rightArrow.addEventListener('click',()=>{
+    slideNum<length? nxtSlide() : firstSlide()
+  console.log(slideNum<length);
+    if(rightArrow){
+        console.log('hai right');        
+    }
+else {
+    console.log('error');
+}
+})
+// when right arrow clicked , .slider-content move towards left
+function nxtSlide(){
+    console.log('length is in nxtslide',length);
+    slider.style.transform=`translateX(-${slideNum*1400}px)`
+    slideNum++
+    // slider.style.overflow=`scroll`
+} 
+
+
+// when right arrow clicked on last slide , it moves towards first slide 
+function firstSlide(){
+slideNum=1
+slider.style.transform=`translateX(0px)`
+}
+
+function prevSlide(){
+    console.log('prevSlide');
+    console.log(slideNum>1);
+   
+// go to previous slide
+slider.style.transform=`translateX(-${(slideNum-2)*1400}px)`
+slideNum--
+}
+
+function lastSlide(){
+    console.log('lastslide');
+    // when left arrow clicked on first slide , it moves towards last slide 
+    slider.style.transform=`translateX(-${(length-1)*1400}px)`
+
+}
+})
+
+
+
+
+
+</script>
+</html>
