@@ -18,13 +18,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Agdasima&family=Hind+Vadodara&family=Kalnia&family=Orbitron&family=Oswald&family=Playfair+Display&family=Poppins:wght@300&family=Roboto+Condensed:ital,wght@1,300;1,400&family=Roboto+Mono&family=Roboto:ital,wght@0,300;1,300&family=Saira+Extra+Condensed:wght@200&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="web-container">
+    <div class="web-container" id="Chocolux">
 <div class="container">
 
 
     <!-- nav bar -->
 <nav>
-<div class="heading">Chocolux</div>
+<div class="heading" >Chocolux</div>
     <ul>    
         <li class="link">Home</li>
         <li class="link"><a href="#content0"> About</a></li>
@@ -54,20 +54,20 @@
                 <img class="image" src="./Milk-Chocolate-1.jpg" alt="">
             </div>
             <div class="slider-content">
-                <h1 class="heading" id="yummy">Chocolate <br> yummy 1</h1>
-                <img class="image" src="./Milk-Chocolate-1.jpg" alt="">
+                <h1 class="heading" id="yummy"> Our chocolate <br> is crafted  <br> the finest <br> ingredients.</h1>
+                <img class="image" src="https://th.bing.com/th/id/OIP.DJ7Jep19Wicsf_Yq_ljZowHaHa?w=500&h=500&rs=1&pid=ImgDetMain" alt="">
             </div>
             <div class="slider-content">
-                <h1 class="heading" id="yummy">Chocolate <br> yummy 2</h1>
-                <img class="image" src="./Milk-Chocolate-1.jpg" alt="">
+                <h1 class="heading" id="yummy"> Our journey <br> began <br> with a love <br> for chocolate</h1>
+                <img class="image" src="https://images.pexels.com/photos/1854664/pexels-photo-1854664.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
             </div>
             <div class="slider-content">
-                <h1 class="heading" id="yummy">Chocolate <br> yummy 3</h1>
-                <img class="image" src="./Milk-Chocolate-1.jpg" alt="">
+                <h1 class="heading" id="yummy">Sourced from <br> the finest <br> cocoa farms..</h1>
+                <img class="image" src="https://wallpapercave.com/wp/wp5853391.jpg" alt="">
             </div>
             <div class="slider-content">
-                <h1 class="heading" id="yummy">Chocolate <br> yummy 4</h1>
-                <img class="image" src="./Milk-Chocolate-1.jpg" alt="">
+                <h1 class="heading" id="yummy">Unlock the <br> power of chocolate</h1>
+                <img class="image" src="https://wallpapercave.com/wp/wp2066318.jpg" alt="">
             </div>
         </div>   
     </div>
@@ -77,7 +77,7 @@
 
 
     <!-- about page with an image on right -->
-    <div class="about" id="content0">
+    <div class="about reveal" id="content0">
         <span>
             <h1 class="heading">  About Our Company</h1>
             <p class="parag">Lorem Ipsum is that it has a more-or-less, <br>
@@ -95,7 +95,7 @@
 
     
     <!-- products -->
-    <div class="products"  id="content1">
+    <div class="products reveal"  id="content1">
         <h1 class="heading">Our chocolate products</h1>
         <p class="parag">Many desktop publishing packages and web pagend web page editors now use Lorem Ipsum as their</p>
         <div class="cards">
@@ -122,7 +122,7 @@
 
 
     <!-- offer banner -->
-    <div class="offer">
+    <div class="offer reveal">
         <div class="offer-box">
 <h1 class="heading">Offers on Chocolates</h1>
 <p class="heading">get 5% offer <br> any chocolates</p>
@@ -135,9 +135,12 @@
 
 
     <!-- Imaage and testimonal at right -->
-    <div class="testimonial-container0" id="content3">
+    <div class="testimonial-container0 reveal" id="content3">
         <div class="testimonial-content0">
+            <!-- <img src="https://images.pexels.com/photos/6765740/pexels-photo-6765740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="testimoial-img" alt="">g -->
+            <!-- <img src="https://images.pexels.com/photos/3692877/pexels-photo-3692877.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="testimoial-img" alt=""> -->
             <img class="testimoial-img"  src="https://th.bing.com/th/id/R.e02140c7e9fcedefa1c3f1013852884a?rik=i0Xv%2bhsIsFGJyQ&riu=http%3a%2f%2fclipart-library.com%2fimages_k%2ftransparent-chocolate%2ftransparent-chocolate-5.png&ehk=Bs4GcdrpJaGSoBVmYKLTKb9al32yDgFC6NTD2fFIALI%3d&risl=&pid=ImgRaw&r=0" alt="">
+             <!-- <img class="testimoial-img" src="https://png.pngtree.com/png-vector/20240122/ourmid/pngtree-man-eating-chocolate-png-image_11455928.png" alt=""> -->
                <!--  -->
                <div class="arrow0">
                 <span id="left-arrow">&larr;</span>
@@ -282,7 +285,7 @@
 
     <!-- contact us page with map at right side -->
     <h1 class="heading" id="contact-title">Contact Us</h1>
-    <div class="contact-container" id="content4">
+    <div class="contact-container reveal" id="content4">
         <form class="contact-content" id="contact-inform" >
             <input  type="text" placeholder="Full Name" id="name-inform">
             <input type="text" placeholder="Phone Number" id="phone-inform">
@@ -302,13 +305,15 @@
 
 
     <!-- footeer -->
-    <footer>
+    <footer class="reveal">
 <div class="row1">
             <input type="email" placeholder="Enter Your email" id="row-email">
             <span class="row1-arrow" ><i class="fa-solid fa-arrow-right" ></i></span>
     <i class="fa-brands fa-facebook footer-icon"></i>
     <i class="fa-brands fa-twitter footer-icon"></i>
     <i class="fa-brands fa-linkedin footer-icon"></i>
+    <a href="#Chocolux" style="color: #fff;" class=" footer-icon"><i class="fa-solid fa-arrow-up"></i></a>
+  
 </div>
 <div class="row2">
     <div id="col-1" class="col">

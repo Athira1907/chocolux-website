@@ -208,5 +208,27 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 
 
+// reveal
+document.addEventListener('scroll',reveal)
 
+function reveal(){
+    var reveals=document.querySelectorAll('.reveal')
+    for(var i = 0; i < reveals.length; i++){
+        // reveals.length = 4
+   
+       var windowheight = window.innerHeight; ///This line gets the height of the browser window in pixels and stores it in the windowHeight variable.
+       console.log('ht of window',windowheight);//467
+       var revealtop = reveals[i].getBoundingClientRect().top; //This line gets the distance from the top of the viewport to the top of the current element
+                                                                 // (reveals[i]) and stores it in the revealTop variable.
+       var revealpoint = 260;
+    // var revealpoint=100
+   
+       if(revealtop < windowheight - revealpoint){
+         reveals[i].classList.add('active');
+       }
+       else{
+         reveals[i].classList.remove('active');
+       }
+     }
+}
 // 

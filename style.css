@@ -6,6 +6,7 @@
 }
 html{
     scroll-behavior: smooth;
+    transition: all 10s;
 }
 .web-container{
     background-color: #e6ecec;
@@ -530,6 +531,14 @@ padding-top: 30px;
     
     } 
     }
+     /* reveal */
+     .reveal {
+        opacity: 0;
+        transition: opacity 3s ease-out;
+      }
+      .reveal.active {
+        opacity: 1;
+      }
     
     @media screen and (max-width: 767px) {
     /* start of medium tablet styles */
